@@ -10,6 +10,8 @@ import {
   optimism,
   optimismSepolia,
   sepolia,
+  jbc,
+  thaiChain
 } from "viem/chains";
 import { createConfig } from "wagmi";
 import { erc20Abi, optimismPortalAbi } from "./abi";
@@ -25,6 +27,8 @@ const getChain = (chainId: number) => {
     optimism,
     baseSepolia,
     optimismSepolia,
+    jbc,
+    thaiChain
   ];
   const detectedChain = supportedChains.find((chain) => chain.id === chainId);
   if (!detectedChain) {
